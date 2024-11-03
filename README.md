@@ -36,6 +36,7 @@ aes_decryption_project/
 ├── Makefile                  # Arquivo Makefile para compilar e executar o projeto
 ├── README.md                 # Este arquivo README com instruções detalhadas
 └── .gitignore                # Arquivo para ignorar arquivos temporários e binários
+```
 
 ## Bibliotecas utilizadas
 

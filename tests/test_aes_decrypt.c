@@ -5,7 +5,7 @@
 #include "aes_decrypt.h"
 
 static void test_aes_decrypt_success(void **state) {
-    (void) state;  // Evita warnings de parâmetro não usado
+    (void) state;  // Evita warnings de parametro nao usado
 
     uint8_t encrypted_text[] = {
         0xa5, 0x7f, 0xd9, 0x72, 0x5f, 0xb5, 0x3c, 0x53,
@@ -16,16 +16,16 @@ static void test_aes_decrypt_success(void **state) {
     uint8_t key[AES_KEY_SIZE] = "thisisasecretkey";
     uint8_t decrypted_text[32] = {0};
 
-    // Texto esperado após a decodificação
+    // Texto esperado apos a decodificacao
     const char *expected_output = "Expected plain text";
 
-    // Chama a função de decodificação
+    // Chama a funcao de decodificacao
     assert_int_equal(aes_decrypt(encrypted_text, decrypted_text, key), 0);
     assert_string_equal((const char*) decrypted_text, expected_output);
 }
 
 static void test_aes_decrypt_null_parameters(void **state) {
-    (void) state;  // Evita warnings de parâmetro não usado
+    (void) state;  // Evita warnings de parametro nao usado
 
     uint8_t key[AES_KEY_SIZE] = "thisisasecretkey";
     uint8_t decrypted_text[32] = {0};

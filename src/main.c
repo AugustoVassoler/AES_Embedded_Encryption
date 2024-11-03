@@ -13,7 +13,7 @@ int main() {
     uint8_t key[AES_KEY_SIZE] = "thisisasecretkey";
     uint8_t decrypted_text[32] = {0};
 
-    // Chama a função de decodificação
+    // Chama a funcao de decodificacao
     if (aes_decrypt(encrypted_text, decrypted_text, key) == 0) {
         printf("Texto decodificado: %s\n", decrypted_text);
     } else {
